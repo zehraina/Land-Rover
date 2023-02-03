@@ -1,0 +1,8 @@
+prefix=/home/fansan/Desktop/Land-Rover/Drover/catkin_ws/devel
+
+Name: rover_urdf_test3_description
+Description: Description of rover_urdf_test3_description
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,775 @@
+<?xml version="1.0" ?>
+<robot name="rover_urdf_test3" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find rover_urdf_test3_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find rover_urdf_test3_description)/urdf/rover_urdf_test3.trans" />
+<xacro:include filename="$(find rover_urdf_test3_description)/urdf/rover_urdf_test3.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.7000973727173087 0.001213812884788477 0.021729704951853716" rpy="0 0 0"/>
+    <mass value="1.0018651206945566"/>
+    <inertia ixx="0.011025" iyy="0.00289" izz="0.013559" ixy="-0.0" iyz="-1.3e-05" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rover_leg12_1">
+  <inertial>
+    <origin xyz="0.005909983333544533 -1.4402368186949843e-13 -0.03362118819507126" rpy="0 0 0"/>
+    <mass value="0.022576009218286612"/>
+    <inertia ixx="8.4e-05" iyy="1.6e-05" izz="7e-05" ixy="-0.0" iyz="0.0" ixz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.785097 0.13125 -0.010238" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/rover_leg12_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.785097 0.13125 -0.010238" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/rover_leg12_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rover_leg34_1">
+  <inertial>
+    <origin xyz="-0.0059092378989266114 1.169342400686446e-13 -0.033621188195070414" rpy="0 0 0"/>
+    <mass value="0.022576009218287705"/>
+    <inertia ixx="8.4e-05" iyy="1.6e-05" izz="7e-05" ixy="0.0" iyz="-0.0" ixz="-2e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.615097 0.13125 -0.010238" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/rover_leg34_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.615097 0.13125 -0.010238" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/rover_leg34_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rov_leg6_1">
+  <inertial>
+    <origin xyz="-0.00450154047246798 0.019807850297414303 -0.02773074523797494" rpy="0 0 0"/>
+    <mass value="0.01719642610594528"/>
+    <inertia ixx="1.6e-05" iyy="1.1e-05" izz="6e-06" ixy="1e-06" iyz="7e-06" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.615097 -0.13125 -0.010238" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/rov_leg6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.615097 -0.13125 -0.010238" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/rov_leg6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rov_leg5_1">
+  <inertial>
+    <origin xyz="0.004502285907085679 0.019807850297403395 -0.027730745237974832" rpy="0 0 0"/>
+    <mass value="0.01719642610594526"/>
+    <inertia ixx="1.6e-05" iyy="1.1e-05" izz="6e-06" ixy="-1e-06" iyz="7e-06" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.785097 -0.13125 -0.010238" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/rov_leg5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.785097 -0.13125 -0.010238" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/rov_leg5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="dc_motar6_1">
+  <inertial>
+    <origin xyz="-0.016999627282691332 3.6552571042181015e-07 1.3344237432405537e-07" rpy="0 0 0"/>
+    <mass value="0.1073268581431187"/>
+    <inertia ixx="9e-06" iyy="1.5e-05" izz="1.5e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.621197 -0.175169 0.051249" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/dc_motar6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.621197 -0.175169 0.051249" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/dc_motar6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="dc_motar6_axle__1">
+  <inertial>
+    <origin xyz="-0.012999627282692328 3.6552594548378003e-07 1.3344237426854422e-07" rpy="0 0 0"/>
+    <mass value="0.01894003378996254"/>
+    <inertia ixx="0.0" iyy="4e-06" izz="4e-06" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.604197 -0.175169 0.051249" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/dc_motar6_axle__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.604197 -0.175169 0.051249" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/dc_motar6_axle__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="dc_motar4_1">
+  <inertial>
+    <origin xyz="-0.01699962728269422 4.331062625206883e-07 1.1269990164014532e-07" rpy="0 0 0"/>
+    <mass value="0.1073268581431187"/>
+    <inertia ixx="9e-06" iyy="1.5e-05" izz="1.5e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.620597 0.052414 0.05047" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/dc_motar4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.620597 0.052414 0.05047" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/dc_motar4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="dc_motar4_ax_1">
+  <inertial>
+    <origin xyz="-0.012999627282694104 4.3310607952817826e-07 1.1269990164708421e-07" rpy="0 0 0"/>
+    <mass value="0.01894003378996256"/>
+    <inertia ixx="0.0" iyy="4e-06" izz="4e-06" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.603597 0.052414 0.05047" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/dc_motar4_ax_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.603597 0.052414 0.05047" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/dc_motar4_ax_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="dc_motar3_ax_1">
+  <inertial>
+    <origin xyz="-0.012999627282693105 -4.3310649650019073e-07 1.1269990157769527e-07" rpy="0 0 0"/>
+    <mass value="0.01894003378996254"/>
+    <inertia ixx="0.0" iyy="4e-06" izz="4e-06" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.603597 0.210086 0.05047" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/dc_motar3_ax_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.603597 0.210086 0.05047" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/dc_motar3_ax_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="dc_motar3_1">
+  <inertial>
+    <origin xyz="-0.016999627282693885 -4.331063132578805e-07 1.1269990162626753e-07" rpy="0 0 0"/>
+    <mass value="0.10732685814311867"/>
+    <inertia ixx="9e-06" iyy="1.5e-05" izz="1.5e-05" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.620597 0.210086 0.05047" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/dc_motar3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.620597 0.210086 0.05047" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/dc_motar3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="dc_motar1_1">
+  <inertial>
+    <origin xyz="0.01700037271731314 -4.331063132578805e-07 1.1269990162626753e-07" rpy="0 0 0"/>
+    <mass value="0.10732685814311867"/>
+    <inertia ixx="9e-06" iyy="1.5e-05" izz="1.5e-05" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.779597 0.210086 0.05047" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/dc_motar1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.779597 0.210086 0.05047" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/dc_motar1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="dc_motar1_axle_1">
+  <inertial>
+    <origin xyz="0.013000372717313469 -4.331064963336573e-07 1.1269990159851195e-07" rpy="0 0 0"/>
+    <mass value="0.018940033789962514"/>
+    <inertia ixx="0.0" iyy="4e-06" izz="4e-06" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.796597 0.210086 0.05047" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/dc_motar1_axle_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.796597 0.210086 0.05047" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/dc_motar1_axle_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="dc_motar2_axle_1">
+  <inertial>
+    <origin xyz="0.01300037271731258 4.3310607951430047e-07 1.1269990164014532e-07" rpy="0 0 0"/>
+    <mass value="0.01894003378996253"/>
+    <inertia ixx="0.0" iyy="4e-06" izz="4e-06" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.796597 0.052414 0.05047" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/dc_motar2_axle_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.796597 0.052414 0.05047" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/dc_motar2_axle_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="dc_motar2_1">
+  <inertial>
+    <origin xyz="0.017000372717312917 4.331062625206883e-07 1.1269990164014532e-07" rpy="0 0 0"/>
+    <mass value="0.1073268581431187"/>
+    <inertia ixx="9e-06" iyy="1.5e-05" izz="1.5e-05" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.779597 0.052414 0.05047" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/dc_motar2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.779597 0.052414 0.05047" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/dc_motar2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="dc_motar5_axle_1">
+  <inertial>
+    <origin xyz="0.013000372717310693 3.6552552770685587e-07 1.33442374282422e-07" rpy="0 0 0"/>
+    <mass value="0.01894003378996251"/>
+    <inertia ixx="0.0" iyy="4e-06" izz="4e-06" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.795997 -0.175169 0.051249" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/dc_motar5_axle_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.795997 -0.175169 0.051249" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/dc_motar5_axle_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="dc_motar5_1">
+  <inertial>
+    <origin xyz="0.017000372717310253 3.6552571042181015e-07 1.3344237432405537e-07" rpy="0 0 0"/>
+    <mass value="0.1073268581431187"/>
+    <inertia ixx="9e-06" iyy="1.5e-05" izz="1.5e-05" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.778997 -0.175169 0.051249" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/dc_motar5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.778997 -0.175169 0.051249" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/dc_motar5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel3_1">
+  <inertial>
+    <origin xyz="0.003572019017357264 -2.3730644099773102e-07 9.907625724697722e-08" rpy="0 0 0"/>
+    <mass value="0.14715563268227955"/>
+    <inertia ixx="0.000148" iyy="9.4e-05" izz="9.4e-05" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.566597 0.210086 0.05047" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/wheel3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.566597 0.210086 0.05047" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/wheel3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel4_1">
+  <inertial>
+    <origin xyz="0.0035722707208897253 6.30513902206975e-07 9.907742837267364e-08" rpy="0 0 0"/>
+    <mass value="0.14716828237578544"/>
+    <inertia ixx="0.000148" iyy="9.4e-05" izz="9.4e-05" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.566597 0.052414 0.05047" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/wheel4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.566597 0.052414 0.05047" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/wheel4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel6_1">
+  <inertial>
+    <origin xyz="0.003572019023539985 5.652954421786482e-07 1.198107031571971e-07" rpy="0 0 0"/>
+    <mass value="0.1471556326822817"/>
+    <inertia ixx="0.000148" iyy="9.4e-05" izz="9.4e-05" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.567197 -0.175169 0.051249" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/wheel6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.567197 -0.175169 0.051249" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/wheel6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel1_1">
+  <inertial>
+    <origin xyz="-0.0035714127015948893 -4.7009295928157613e-07 -2.044612660914713e-07" rpy="0 0 0"/>
+    <mass value="0.14716959270455743"/>
+    <inertia ixx="0.000148" iyy="9.4e-05" izz="9.4e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.833597 0.210086 0.05047" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/wheel1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.833597 0.210086 0.05047" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/wheel1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel2_1">
+  <inertial>
+    <origin xyz="-0.0035714127015994412 7.518920382698635e-07 7.571322951926973e-08" rpy="0 0 0"/>
+    <mass value="0.14716959270455107"/>
+    <inertia ixx="0.000148" iyy="9.4e-05" izz="9.4e-05" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.833597 0.052414 0.05047" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/wheel2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.833597 0.052414 0.05047" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/wheel2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel5_1">
+  <inertial>
+    <origin xyz="-0.003571233186838496 4.025227034465395e-07 4.545927109952941e-07" rpy="0 0 0"/>
+    <mass value="0.14716057068662433"/>
+    <inertia ixx="0.000148" iyy="9.4e-05" izz="9.4e-05" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.832997 -0.175169 0.051249" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/wheel5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.832997 -0.175169 0.051249" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/wheel5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_camera_1">
+  <inertial>
+    <origin xyz="3.7012464515484567e-07 -3.682398265184017e-05 -0.007498185934772646" rpy="0 0 0"/>
+    <mass value="0.007636091553825903"/>
+    <inertia ixx="0.0" iyy="1e-06" izz="1e-06" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.700097 -0.145 -0.0415" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/back_camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.700097 -0.145 -0.0415" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/back_camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="cover_1">
+  <inertial>
+    <origin xyz="3.720755304970069e-07 -0.1479961400556017 0.04593433425164602" rpy="0 0 0"/>
+    <mass value="0.6079631145490446"/>
+    <inertia ixx="0.004866" iyy="0.002425" izz="0.006674" ixy="-0.0" iyz="1.2e-05" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.700097 -0.15 -0.044" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/cover_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.700097 -0.15 -0.044" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/cover_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera_1">
+  <inertial>
+    <origin xyz="3.727173124579153e-07 -0.014608125530224086 0.014992719298696305" rpy="0 0 0"/>
+    <mass value="0.04851657201774762"/>
+    <inertia ixx="7e-06" iyy="1.6e-05" izz="1.5e-05" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.700097 0.135 -0.024" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.700097 0.135 -0.024" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_1">
+  <inertial>
+    <origin xyz="1.3014779991493697e-06 -0.00035540064376657354 0.0027852932894022603" rpy="0 0 0"/>
+    <mass value="0.0025453141239423606"/>
+    <inertia ixx="0.0" iyy="0.0" izz="1e-06" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.700097 0.095 -0.104" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.700097 0.095 -0.104" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_base_1">
+  <inertial>
+    <origin xyz="3.7271731145871456e-07 -5.86764872800849e-10 0.002028650060045878" rpy="0 0 0"/>
+    <mass value="0.007902916123399882"/>
+    <inertia ixx="1e-06" iyy="1e-06" izz="2e-06" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.700097 0.095 -0.099" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/lidar_base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.700097 0.095 -0.099" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://rover_urdf_test3_description/meshes/lidar_base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Revolute 1" type="revolute">
+  <origin xyz="0.785097 -0.13125 0.010238" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="rover_leg12_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+  <limit upper="0.523599" lower="-0.523599" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Revolute 2" type="revolute">
+  <origin xyz="0.615097 -0.13125 0.010238" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="rover_leg34_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+  <limit upper="0.523599" lower="-0.523599" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Revolute 3" type="revolute">
+  <origin xyz="0.615097 0.13125 0.010238" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="rov_leg6_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+  <limit upper="0.523599" lower="-0.523599" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Revolute 6" type="revolute">
+  <origin xyz="0.785097 0.13125 0.010238" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="rov_leg5_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+  <limit upper="0.523599" lower="-0.523599" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid 7" type="fixed">
+  <origin xyz="0.0061 0.043919 -0.061487" rpy="0 0 0"/>
+  <parent link="rov_leg6_1"/>
+  <child link="dc_motar6_1"/>
+</joint>
+
+<joint name="Revolute 8" type="continuous">
+  <origin xyz="-0.017 0.0 0.0" rpy="0 0 0"/>
+  <parent link="dc_motar6_1"/>
+  <child link="dc_motar6_axle__1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+<joint name="Rigid 9" type="fixed">
+  <origin xyz="0.0055 0.078836 -0.060708" rpy="0 0 0"/>
+  <parent link="rover_leg34_1"/>
+  <child link="dc_motar4_1"/>
+</joint>
+
+<joint name="Revolute 10" type="continuous">
+  <origin xyz="-0.017 0.0 0.0" rpy="0 0 0"/>
+  <parent link="dc_motar4_1"/>
+  <child link="dc_motar4_ax_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+<joint name="Revolute 11" type="continuous">
+  <origin xyz="-0.017 0.0 0.0" rpy="0 0 0"/>
+  <parent link="dc_motar3_1"/>
+  <child link="dc_motar3_ax_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+<joint name="Rigid 12" type="fixed">
+  <origin xyz="0.0055 -0.078836 -0.060708" rpy="0 0 0"/>
+  <parent link="rover_leg34_1"/>
+  <child link="dc_motar3_1"/>
+</joint>
+
+<joint name="Rigid 13" type="fixed">
+  <origin xyz="-0.0055 -0.078836 -0.060708" rpy="0 0 0"/>
+  <parent link="rover_leg12_1"/>
+  <child link="dc_motar1_1"/>
+</joint>
+
+<joint name="Revolute 14" type="continuous">
+  <origin xyz="0.017 0.0 0.0" rpy="0 0 0"/>
+  <parent link="dc_motar1_1"/>
+  <child link="dc_motar1_axle_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+<joint name="Revolute 15" type="continuous">
+  <origin xyz="0.017 0.0 0.0" rpy="0 0 0"/>
+  <parent link="dc_motar2_1"/>
+  <child link="dc_motar2_axle_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+<joint name="Rigid 16" type="fixed">
+  <origin xyz="-0.0055 0.078836 -0.060708" rpy="0 0 0"/>
+  <parent link="rover_leg12_1"/>
+  <child link="dc_motar2_1"/>
+</joint>
+
+<joint name="Revolute 17" type="continuous">
+  <origin xyz="0.017 0.0 0.0" rpy="0 0 0"/>
+  <parent link="dc_motar5_1"/>
+  <child link="dc_motar5_axle_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+<joint name="Rigid 18" type="fixed">
+  <origin xyz="-0.0061 0.043919 -0.061487" rpy="0 0 0"/>
+  <parent link="rov_leg5_1"/>
+  <child link="dc_motar5_1"/>
+</joint>
+
+<joint name="Rigid 21" type="fixed">
+  <origin xyz="-0.037 0.0 0.0" rpy="0 0 0"/>
+  <parent link="dc_motar3_ax_1"/>
+  <child link="wheel3_1"/>
+</joint>
+
+<joint name="Rigid 22" type="fixed">
+  <origin xyz="-0.037 0.0 0.0" rpy="0 0 0"/>
+  <parent link="dc_motar4_ax_1"/>
+  <child link="wheel4_1"/>
+</joint>
+
+<joint name="Rigid 23" type="fixed">
+  <origin xyz="-0.037 0.0 0.0" rpy="0 0 0"/>
+  <parent link="dc_motar6_axle__1"/>
+  <child link="wheel6_1"/>
+</joint>
+
+<joint name="Rigid 26" type="fixed">
+  <origin xyz="0.037 0.0 0.0" rpy="0 0 0"/>
+  <parent link="dc_motar1_axle_1"/>
+  <child link="wheel1_1"/>
+</joint>
+
+<joint name="Rigid 27" type="fixed">
+  <origin xyz="0.037 0.0 0.0" rpy="0 0 0"/>
+  <parent link="dc_motar2_axle_1"/>
+  <child link="wheel2_1"/>
+</joint>
+
+<joint name="Rigid 28" type="fixed">
+  <origin xyz="0.037 0.0 0.0" rpy="0 0 0"/>
+  <parent link="dc_motar5_axle_1"/>
+  <child link="wheel5_1"/>
+</joint>
+
+<joint name="Rigid 29" type="fixed">
+  <origin xyz="0.700097 0.145 0.0415" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="back_camera_1"/>
+</joint>
+
+<joint name="Revolute 30" type="revolute">
+  <origin xyz="0.700097 0.15 0.044" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="cover_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+  <limit upper="1.308997" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid 31" type="fixed">
+  <origin xyz="0.700097 -0.135 0.024" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="camera_1"/>
+</joint>
+
+<joint name="Revolute 32" type="revolute">
+  <origin xyz="0.0 0.0 0.005" rpy="0 0 0"/>
+  <parent link="lidar_base_1"/>
+  <child link="lidar_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid 33" type="fixed">
+  <origin xyz="0.0 -0.245 0.055" rpy="0 0 0"/>
+  <parent link="cover_1"/>
+  <child link="lidar_base_1"/>
+</joint>
+
+</robot>
