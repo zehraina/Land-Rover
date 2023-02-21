@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<robot name="rover_urdf_final" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<material name="black">
+  <color rgba="0.00 0.00 0.00 1.000"/>
+</material>
+
+<material name="dark_gray">
+  <color rgba="0.078 0.078 0.078 1.000"/>
+</material>
+
+
+<material name="silver">
+  <color rgba="0.700 0.700 0.700 1.000"/>
+</material>
+
+<material name="blue000010119">
+  <color rgba="0.00 0.040 0.470 1.000"/>
+</material>
+
+<material name="gray110110110">
+  <color rgba="0.431 0.431 0.431 1.000"/>
+</material>
+
+<material name="gray060060060">
+  <color rgba="0.235 0.235 0.235 1.000"/>
+</material>
+
+<material name="white">
+  <color rgba="1.00 1.00 1.00 1.000"/>
+</material>
+
+</robot>

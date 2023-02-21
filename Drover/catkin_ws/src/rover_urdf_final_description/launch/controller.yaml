@@ -1,0 +1,55 @@
+rover_urdf_final_controller:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers --------------------------------------
+  Revolute_1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Revolute_1
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  Revolute_2_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Revolute_2
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  Revolute_3_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Revolute_3
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  Revolute_4_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Revolute_4
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  Revolute_5_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Revolute_5
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  Revolute_6_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Revolute_6
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  Revolute_7_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Revolute_7
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  Revolute_8_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Revolute_8
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  Revolute_9_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Revolute_9
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  Revolute_10_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Revolute_10
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  Revolute_11_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Revolute_11
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  Revolute_12_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Revolute_12
+    pid: {p: 100.0, i: 0.01, d: 10.0}

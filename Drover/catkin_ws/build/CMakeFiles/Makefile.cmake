@@ -13,10 +13,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "catkin/catkin_generated/version/package.cmake"
   "catkin_generated/installspace/_setup_util.py"
   "catkin_generated/order_packages.cmake"
-  "rover_urdf_test3_description/catkin_generated/package.cmake"
+  "rover_urdf_final_description/catkin_generated/package.cmake"
   "/home/fansan/Desktop/Land-Rover/Drover/catkin_ws/src/CMakeLists.txt"
-  "/home/fansan/Desktop/Land-Rover/Drover/catkin_ws/src/rover_urdf_test3_description/CMakeLists.txt"
-  "/home/fansan/Desktop/Land-Rover/Drover/catkin_ws/src/rover_urdf_test3_description/package.xml"
+  "/home/fansan/Desktop/Land-Rover/Drover/catkin_ws/src/rover_urdf_final_description/CMakeLists.txt"
+  "/home/fansan/Desktop/Land-Rover/Drover/catkin_ws/src/rover_urdf_final_description/package.xml"
   "/opt/ros/noetic/share/catkin/cmake/all.cmake"
   "/opt/ros/noetic/share/catkin/cmake/assert.cmake"
   "/opt/ros/noetic/share/catkin/cmake/atomic_configure_file.cmake"
@@ -153,7 +153,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "gtest/CMakeFiles/CMakeDirectoryInformation.cmake"
   "gtest/googlemock/CMakeFiles/CMakeDirectoryInformation.cmake"
   "gtest/googletest/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "rover_urdf_test3_description/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "rover_urdf_final_description/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -167,5 +167,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "gtest/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"
   "gtest/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
   "gtest/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
-  "rover_urdf_test3_description/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake"
+  "rover_urdf_final_description/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake"
   )

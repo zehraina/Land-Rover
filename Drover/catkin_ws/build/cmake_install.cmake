@@ -131,7 +131,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/fansan/Desktop/Land-Rover/Drover/catkin_ws/build/gtest/cmake_install.cmake")
-  include("/home/fansan/Desktop/Land-Rover/Drover/catkin_ws/build/rover_urdf_test3_description/cmake_install.cmake")
+  include("/home/fansan/Desktop/Land-Rover/Drover/catkin_ws/build/rover_urdf_final_description/cmake_install.cmake")
 
 endif()
 

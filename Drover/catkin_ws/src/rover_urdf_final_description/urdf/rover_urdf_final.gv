@@ -1,0 +1,95 @@
+digraph G {
+node [shape=box];
+"dummy" [label="dummy"];
+"base_link" [label="base_link"];
+"cover_1" [label="cover_1"];
+"lidar_base_1" [label="lidar_base_1"];
+"lidar_1" [label="lidar_1"];
+"rov_leg12_1" [label="rov_leg12_1"];
+"dc_motar1_1" [label="dc_motar1_1"];
+"dc_motar1_axle_1" [label="dc_motar1_axle_1"];
+"wheel1_1" [label="wheel1_1"];
+"dc_motar2_1" [label="dc_motar2_1"];
+"dc_motar2_axle_1" [label="dc_motar2_axle_1"];
+"wheel2_1" [label="wheel2_1"];
+"rov_leg5_1" [label="rov_leg5_1"];
+"dc_motar5_1" [label="dc_motar5_1"];
+"dc_motar5_axle_1" [label="dc_motar5_axle_1"];
+"wheel5_1" [label="wheel5_1"];
+"rov_leg6_1" [label="rov_leg6_1"];
+"dc_motar6_1" [label="dc_motar6_1"];
+"dc_motar6_axle__1" [label="dc_motar6_axle__1"];
+"wheel6_1" [label="wheel6_1"];
+"rov_leg34_1" [label="rov_leg34_1"];
+"dc_motar3_1" [label="dc_motar3_1"];
+"dc_motar3_axle_1" [label="dc_motar3_axle_1"];
+"wheel3_1" [label="wheel3_1"];
+"dc_motar4_1" [label="dc_motar4_1"];
+"dc_motar4_axle_1" [label="dc_motar4_axle_1"];
+"wheel4_1" [label="wheel4_1"];
+"back_camera_1" [label="back_camera_1"];
+"battery1_1" [label="battery1_1"];
+"battery2_1" [label="battery2_1"];
+"camera_1" [label="camera_1"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"dummy" -> "dummy_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"dummy_joint" -> "base_link"
+"base_link" -> "Revolute_1" [label="xyz: 9.7e-05 0.15 0.044 \nrpy: 0 -0 0"]
+"Revolute_1" -> "cover_1"
+"cover_1" -> "Rigid_3" [label="xyz: 0 -0.245 0.055 \nrpy: 0 -0 0"]
+"Rigid_3" -> "lidar_base_1"
+"lidar_base_1" -> "Revolute_2" [label="xyz: 0 0 0.005 \nrpy: 0 -0 0"]
+"Revolute_2" -> "lidar_1"
+"base_link" -> "Revolute_3" [label="xyz: 0.085097 -0.13125 0.010238 \nrpy: 0 -0 0"]
+"Revolute_3" -> "rov_leg12_1"
+"rov_leg12_1" -> "Rigid_7" [label="xyz: -0.0058 -0.078836 -0.060708 \nrpy: 0 -0 0"]
+"Rigid_7" -> "dc_motar1_1"
+"dc_motar1_1" -> "Revolute_10" [label="xyz: 0.017 0 0 \nrpy: 0 -0 0"]
+"Revolute_10" -> "dc_motar1_axle_1"
+"dc_motar1_axle_1" -> "Rigid_17" [label="xyz: 0.0363 0 0 \nrpy: 0 -0 0"]
+"Rigid_17" -> "wheel1_1"
+"rov_leg12_1" -> "Rigid_8" [label="xyz: -0.0058 0.078836 -0.060708 \nrpy: 0 -0 0"]
+"Rigid_8" -> "dc_motar2_1"
+"dc_motar2_1" -> "Revolute_9" [label="xyz: 0.017 0 0 \nrpy: 0 -0 0"]
+"Revolute_9" -> "dc_motar2_axle_1"
+"dc_motar2_axle_1" -> "Rigid_16" [label="xyz: 0.0363 0 0 \nrpy: 0 -0 0"]
+"Rigid_16" -> "wheel2_1"
+"base_link" -> "Revolute_4" [label="xyz: 0.085097 0.13125 0.010238 \nrpy: 0 -0 0"]
+"Revolute_4" -> "rov_leg5_1"
+"rov_leg5_1" -> "Rigid_11" [label="xyz: -0.0058 0.043919 -0.061487 \nrpy: 0 -0 0"]
+"Rigid_11" -> "dc_motar5_1"
+"dc_motar5_1" -> "Revolute_11" [label="xyz: 0.017 0 0 \nrpy: 0 -0 0"]
+"Revolute_11" -> "dc_motar5_axle_1"
+"dc_motar5_axle_1" -> "Rigid_12" [label="xyz: 0.0363 0 0 \nrpy: 0 -0 0"]
+"Rigid_12" -> "wheel5_1"
+"base_link" -> "Revolute_5" [label="xyz: -0.084903 0.13125 0.010238 \nrpy: 0 -0 0"]
+"Revolute_5" -> "rov_leg6_1"
+"rov_leg6_1" -> "Rigid_10" [label="xyz: 0.0058 0.043919 -0.061487 \nrpy: 0 -0 0"]
+"Rigid_10" -> "dc_motar6_1"
+"dc_motar6_1" -> "Revolute_7" [label="xyz: -0.017 0 0 \nrpy: 0 -0 0"]
+"Revolute_7" -> "dc_motar6_axle__1"
+"dc_motar6_axle__1" -> "Rigid_13" [label="xyz: -0.0363 0 0 \nrpy: 0 -0 0"]
+"Rigid_13" -> "wheel6_1"
+"base_link" -> "Revolute_6" [label="xyz: -0.084903 -0.13125 0.010238 \nrpy: 0 -0 0"]
+"Revolute_6" -> "rov_leg34_1"
+"rov_leg34_1" -> "Rigid_18" [label="xyz: 0.0058 -0.078836 -0.060708 \nrpy: 0 -0 0"]
+"Rigid_18" -> "dc_motar3_1"
+"dc_motar3_1" -> "Revolute_12" [label="xyz: -0.017 0 0 \nrpy: 0 -0 0"]
+"Revolute_12" -> "dc_motar3_axle_1"
+"dc_motar3_axle_1" -> "Rigid_15" [label="xyz: -0.0363 0 0 \nrpy: 0 -0 0"]
+"Rigid_15" -> "wheel3_1"
+"rov_leg34_1" -> "Rigid_9" [label="xyz: 0.0058 0.078836 -0.060708 \nrpy: 0 -0 0"]
+"Rigid_9" -> "dc_motar4_1"
+"dc_motar4_1" -> "Revolute_8" [label="xyz: -0.017 0 0 \nrpy: 0 -0 0"]
+"Revolute_8" -> "dc_motar4_axle_1"
+"dc_motar4_axle_1" -> "Rigid_14" [label="xyz: -0.0363 0 0 \nrpy: 0 -0 0"]
+"Rigid_14" -> "wheel4_1"
+"base_link" -> "Rigid_1" [label="xyz: 9.7e-05 0.135 0.036 \nrpy: 0 -0 0"]
+"Rigid_1" -> "back_camera_1"
+"base_link" -> "Rigid_4" [label="xyz: -0.039903 0.025 0.039 \nrpy: 0 -0 0"]
+"Rigid_4" -> "battery1_1"
+"base_link" -> "Rigid_5" [label="xyz: 0.040097 0.025 0.039 \nrpy: 0 -0 0"]
+"Rigid_5" -> "battery2_1"
+"base_link" -> "Rigid_6" [label="xyz: 9.7e-05 -0.135 0.024 \nrpy: 0 -0 0"]
+"Rigid_6" -> "camera_1"
+}

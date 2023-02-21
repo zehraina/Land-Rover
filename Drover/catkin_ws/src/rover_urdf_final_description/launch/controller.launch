@@ -1,0 +1,9 @@
+<launch>
+
+<rosparam file="$(find rover_urdf_final_description)/launch/controller.yaml" command="load"/>
+<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="rover_urdf_final" args="Revolute_1_position_controller Revolute_2_position_controller Revolute_3_position_controller Revolute_4_position_controller Revolute_5_position_controller Revolute_6_position_controller Revolute_7_position_controller Revolute_8_position_controller Revolute_9_position_controller Revolute_10_position_controller Revolute_11_position_controller Revolute_12_position_controller joint_state_controller "/>
+<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+  <remap from="/joint_states" to="/rover_urdf_final/joint_states"/>
+</node>
+
+</launch>

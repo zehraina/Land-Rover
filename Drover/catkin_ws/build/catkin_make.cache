@@ -1,2 +1,2 @@
-rover_urdf_test3_description
+rover_urdf_final_description
 -DCATKIN_DEVEL_PREFIX=/home/fansan/Desktop/Land-Rover/Drover/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/fansan/Desktop/Land-Rover/Drover/catkin_ws/install -G Unix Makefiles
